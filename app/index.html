@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>SenseBox</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- build:js scripts/vendor/custom.modernizr.js -->
+  <script src="scripts/vendor/custom.modernizr.js"></script>
+  <!-- endbuild -->
+
+  <link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<div class="contain-to-grid">
+		<nav id="navigation" data-magellan-expedition="fixed" class="top-bar" role="navigation">
+			<ul class="title-area">
+				<li class="name">
+					<h1><a href="#">
+						<img src="images/logo.png" alt="Sense Box">
+					</a></h1>
+				</li>
+				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+			</ul>
+			<section class="top-bar-section">
+				<ul class="right">
+					<li class="divider hide-for-small"></li>
+					<li><a href="#main">Home</a></li>
+					<li class="divider hide-for-small"></li>
+					<li><a href="#aboutUs">About Us</a></li>
+					<li class="divider hide-for-small"></li>
+					<li><a href="#features">Features</a></li>
+					<li class="divider hide-for-small"></li>
+					<li><a target="_blank" href="http://cloud.sensebox.co:5000/">SenseCloud</a></li>
+				</ul>
+			</section>
+		</nav>
+	</div>
+
+	<div id="main">
+		<section id="banner"></section>
+			<section id="aboutUs">
+				<div class="row">
+					<div class="large-12 columns">
+						<div class="row">
+							<div class="large-5 column hide-for-small">
+								<div class="center">
+									<img src="images/about_logo.png" alt="Sense Box">
+								</div>
+							</div>
+							<div class="large-7 column">
+								<header>
+									<h2>About Us</h2>
+								</header>
+								<p>
+									The Internet of Things(IOT) was a concept that physical objects are seamlessly integrated into the information network. SenseBox is founded to make the Internet of Things an order of magnitude easier to develop and use. SenseBox, included a cloud platform called SenseCloud and a physical interface called SenseHub, is a service for users, developers and companies are connecting devices and apps to securely store and easily exchange sensor-derived data to the web through API. 
+								</p>
+								<h2>Vision</h2>
+								<p>
+									The team of SenseBox believes that Internet of Things is the next evolution of the Internet. The Internet of Things as well as many portable sensors from open hardwares become more popular and important in this post-PC era. There are a lot of sensory data from many portable sensors and smart phones. SenseBox is committed in making the storage and process of those data easily and securely. Last but not least, the team of SenseBox also think the big data is also future of the internet. Through analysis and use of the big data as well as crowdsourcing application developments, we could improve our life with the help of internet of things . 
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="features">
+				<div class="row">
+					<div class="large-12 columns">
+						<div class="row">
+							<div class="large-5 columns">
+								<div class="center">
+									<img src="images/feature_icon.png" alt="Features">
+								</div>
+							</div>
+							<div class="large-7 columns">
+								<header>
+									<h2>Features</h2>
+								</header>
+								<p><b>The services of SenseBox has following features:</b></p>
+								<ol>
+									<li>Threshold triggered mechanism on SenseCloud</li>
+									<li>Data management according to geolocation and time</li>
+									<li>Open data and Collaboration</li>
+									<li>Code-less deployment and developer friendly</li>
+									<li>Two-way data transfer and control function</li>
+									<li>Social network Integration</li>
+									<li>Hackable hardware friendly platform</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<footer id="footer">
+		<div class="row">
+			<div class="large-12 column">
+				<div class="center">
+					<a href="http://www.sensebox.co">sensebox.co</a> © 2013 SenseBox.
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- build:js scripts/scripts.js -->
+	<script src="bower_components/jquery/jquery.js"></script>
+	
+	<script src="scripts/foundation/foundation.js"></script>
+
+	<script src="scripts/foundation/foundation.alerts.js"></script>
+
+	<script src="scripts/foundation/foundation.clearing.js"></script>
+
+	<script src="scripts/foundation/foundation.cookie.js"></script>
+
+	<script src="scripts/foundation/foundation.dropdown.js"></script>
+
+	<script src="scripts/foundation/foundation.forms.js"></script>
+
+	<script src="scripts/foundation/foundation.interchange.js"></script>
+
+	<script src="scripts/foundation/foundation.joyride.js"></script>
+
+	<script src="scripts/foundation/foundation.magellan.js"></script>
+
+	<script src="scripts/foundation/foundation.orbit.js"></script>
+
+	<script src="scripts/foundation/foundation.placeholder.js"></script>
+
+	<script src="scripts/foundation/foundation.reveal.js"></script>
+
+	<script src="scripts/foundation/foundation.section.js"></script>
+
+	<script src="scripts/foundation/foundation.tooltips.js"></script>
+
+	<script src="scripts/foundation/foundation.topbar.js"></script>
+
+	<script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
+	<script src="bower_components/jquery.localScroll/jquery.localScroll.js"></script>
+	<!-- endbuild -->
+
+	<script>
+    $(document).foundation();
+
+    $(document).ready(function() {
+		$.localScroll({
+			target: window,
+			queue:true,
+			duration:1000,
+			hash:true,
+			offset:1,
+			onBefore:function( e, anchor, $target ){},
+			onAfter:function( anchor, settings ){
+				$('li', '#navigation').removeClass('active');
+				$('li.' + anchor.id, '#navigation').addClass('active');
+			}
+		});
+    });
+  </script>
+</body>
+</html>
